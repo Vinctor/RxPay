@@ -49,10 +49,9 @@
      注:其中```BuildConfig.APPLICATION_ID```是系统变量,为获取你的应用的```applicationID```
      
  * 3  声明(**重要! ! ! ! !**)
-    >```RxWxPay```不需要你自己编写``````wxapi/WXPayEntryActivity``````类
-           以及声明微信要求的广播类```AppRegister```
+    >```RxWxPay```不需要你自己编写``````wxapi/WXPayEntryActivity``````类以及声明微信要求的广播类```AppRegister```
           
-     你只需要在当前app下下的```AndroidManifest```下声明```WXPayEntryActivity```,如下:
+    你只需要在当前app下下的```AndroidManifest```下声明```WXPayEntryActivity```,如下:
  
         <activity android:name="{你的applicationID}.wxapi.WXPayEntryActivity"
         android:exported="true">
@@ -65,10 +64,9 @@
       注:
       你只需要自行填写的内容:
       
-      >在```build.gradle```中声明的的**```ApplicationID```**(**注意:不是```AndroidManifest```中声明的```package```**)
+   >在```build.gradle```中声明的的```ApplicationID```(注意:不是```AndroidManifest```中声明的```package```)
       
-      >在[微信开放平台](https://open.weixin.qq.com)
-      中相应```app```的```AppID```
+   >在[微信开放平台](https://open.weixin.qq.com)中相应```app```的```AppID```
       
  * 4 完成以上3步,你就可以使用```RxWxPay```进行微信支付了:
  
@@ -97,7 +95,7 @@
                         Toast.makeText(thisActivity, wxPayResult.getErrCood() + "", Toast.LENGTH_SHORT).show();
                     }
                 });      
-  你也可以自行构建```WXPayBean```,再进行支付:
+   你也可以自行构建```WXPayBean```,再进行支付:
        
         RxWxPay.WXPayBean payBean
             =new RxWxPay.WWXPayBean(appid, partnerid, noncestr, timestamp, prepayid, sign);
