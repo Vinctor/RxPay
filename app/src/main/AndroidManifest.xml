@@ -3,10 +3,10 @@
     package="cn.vinctor.example.user">
 
     <application
+        android:name="cn.vinctor.example.user.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name="cn.vinctor.example.user.MyApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,12 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="cn.weidoo.doubao.user.wxapi.WXPayEntryActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <data android:scheme="wx1ad65116e47cb726" />
-        </intent-filter>
+        <activity
+            android:name="cn.weidoo.doubao.user.wxapi.WXPayEntryActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx1ad65116e47cb726" />
+            </intent-filter>
         </activity>
 
     </application>
