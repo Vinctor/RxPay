@@ -1,9 +1,9 @@
 # RxPay
 支付宝 微信 支付 Rxjava
 
-##Usage
+## Usage
 
-####支付宝
+#### 支付宝
 
 官方强烈建议在服务器端进行签名,故```RxAliPay```只支持服务器端签名,然后本地客户端进行发起支付
 
@@ -33,7 +33,8 @@
 参照[支付宝](https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.kLWcOb&treeId=204&articleId=105302&docType=1)
 最新官方文档的说明
 
-####微信
+#### 微信
+
 因为微信支付官方要求用户创建```wxapi/WXPayEntryActivity```类,故分为以下几个步骤
 
  * 1 在你自定义的```Application```初始化
@@ -124,4 +125,4 @@
  
  如下:0成功  -1错误  -2取消
  
- ####END
+ #### END
