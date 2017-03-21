@@ -17,14 +17,6 @@ import java.util.Random;
 
 public class OrderInfoUtil2_0 {
 	
-	/**
-	 * 构造授权参数列表
-	 * 
-	 * @param pid
-	 * @param app_id
-	 * @param target_id
-	 * @return
-	 */
 	public static Map<String, String> buildAuthInfoMap(String pid, String app_id, String target_id, boolean rsa2) {
 		Map<String, String> keyValues = new HashMap<String, String>();
 
@@ -61,13 +53,6 @@ public class OrderInfoUtil2_0 {
 		return keyValues;
 	}
 
-	/**
-	 * 构造支付订单参数列表
-	 * @param pid
-	 * @param app_id
-	 * @param target_id
-	 * @return
-	 */
 	public static Map<String, String> buildOrderParamMap(String app_id, boolean rsa2) {
 		Map<String, String> keyValues = new HashMap<String, String>();
 
@@ -88,13 +73,6 @@ public class OrderInfoUtil2_0 {
 		return keyValues;
 	}
 	
-	/**
-	 * 构造支付订单参数信息
-	 * 
-	 * @param map
-	 * 支付订单参数
-	 * @return
-	 */
 	public static String buildOrderParam(Map<String, String> map) {
 		List<String> keys = new ArrayList<String>(map.keySet());
 
@@ -113,14 +91,6 @@ public class OrderInfoUtil2_0 {
 		return sb.toString();
 	}
 	
-	/**
-	 * 拼接键值对
-	 * 
-	 * @param key
-	 * @param value
-	 * @param isEncode
-	 * @return
-	 */
 	private static String buildKeyValue(String key, String value, boolean isEncode) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(key);
@@ -137,14 +107,6 @@ public class OrderInfoUtil2_0 {
 		return sb.toString();
 	}
 	
-	/**
-	 * 对支付参数信息进行签名
-	 * 
-	 * @param map
-	 *            待签名授权信息
-	 * 
-	 * @return
-	 */
 	public static String getSign(Map<String, String> map, String rsaKey, boolean rsa2) {
 		List<String> keys = new ArrayList<String>(map.keySet());
 		// key排序
@@ -173,10 +135,6 @@ public class OrderInfoUtil2_0 {
 		return "sign=" + encodedSign;
 	}
 	
-	/**
-	 * 要求外部订单号必须唯一。
-	 * @return
-	 */
 	private static String getOutTradeNo() {
 		SimpleDateFormat format = new SimpleDateFormat("MMddHHmmss", Locale.getDefault());
 		Date date = new Date();

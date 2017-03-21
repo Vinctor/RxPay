@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
 
 android {
     compileSdkVersion 25
@@ -31,4 +32,14 @@ dependencies {
     compile files('libs/libammsdk.jar')
     compile 'io.reactivex:rxjava:1.1.6'
     compile project(path: ':wxannotationlib')
+}
+
+publish {
+    artifactId = 'rxpay'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    publishVersion = rootProject.publishVersion
+    desc = rootProject.description
+    website = rootProject.website
+    licences = rootProject.licences
 }

@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RxPay.iml" filepath="$PROJECT_DIR$/RxPay.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aptlib/aptlib.iml" filepath="$PROJECT_DIR$/aptlib/aptlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/wxannotationlib/wxannotationlib.iml" filepath="$PROJECT_DIR$/wxannotationlib/wxannotationlib.iml" />
     </modules>
