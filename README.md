@@ -2,7 +2,7 @@
 支付宝 微信 支付 Rxjava
 
 ## Usage
-
+>compile 'com.vinctor:rxpay:0.0.1'
 #### 支付宝
 
 官方强烈建议在服务器端进行签名,故```RxAliPay```只支持服务器端签名,然后本地客户端进行发起支付
